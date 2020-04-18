@@ -1,0 +1,73 @@
+/* #A0C7E8 - light blue
+  #242254 - navy
+  #FFFFFF - white
+  #D32F2F - red
+  #9EABBC - grey */
+
+body {
+  background: linear-gradient(to right, rgba(58,123,213,0.6) 0%, rgba(255,255,255,0.4) 51%, rgba(58,123,213,0.6) 100%);
+  font-family: "Advent Pro";
+}
+
+/* .container{
+  margin-bottom: auto;
+}
+ */
+.logo {
+  display: flex;
+  margin-top: 10%;
+  
+/*   align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; */
+}
+
+.description{
+  font-size: 2.3vw;
+  color: #242254;
+  text-align:center;
+  display: block; 
+  margin-bottom: 5%;
+/*   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+}
+
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gradient-button {
+    font-size: 1.5vw;
+    margin: 15px;
+/*     font-size: 20px; */
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #FFF;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 25px;
+}
+
+.gradient-button:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    margin: 8px 10px 12px;
+}
+
+.gradient-button-3 {background-image: linear-gradient(to right, #D32F2F 0%, #348AC7 51%, #7474BF 100%)}
+.gradient-button-3:hover { background-position: right center; text-decoration: none; color: #ffffff}
+
+.gradient-button-4 {background-image: linear-gradient(to right, #242254 0%, #242254 51%, #D32F2F 100%)}
+.gradient-button-4:hover { background-position: right center; text-decoration: none; color: #FFF;} 

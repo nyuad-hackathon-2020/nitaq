@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Nitaq</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/ico" href="https://cdn.glitch.com/9f61a68e-a58c-4605-9fb3-f353077392b8%2F94377494_693459014734483_1029966215944077312_n.png?v=1587206632087"/>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/create/style.css" />
+<!--     <link rel="stylesheet" href="wave.css"> -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-firestore.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Advent+Pro:medium" rel="stylesheet" type="text/css">
+  </head>
+
+  <!--   Main page -->
+  <body>
+    
+    <nav class="navbar sticky-top navbar-expand-sm py-0 navbar-dark" style = "background-color:#242254;">
+      <a class="navbar-brand" href="../" >
+        <img src="https://cdn.glitch.com/9f61a68e-a58c-4605-9fb3-f353077392b8%2Fthumbnails%2Fnewlogo_light.png?1587192742973" height="80" width="80">
+      </a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../" style="font-size: 20px;">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="font-size: 20px;">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="font-size: 20px;">Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+    <div id="main-wrapper" class="container" style="padding-top: 30px;margin-bottom: 2em;">
+      <form class="col">
+        <div class="form-group">
+          <legend>
+            1. Create A New Course
+          </legend>
+          <div class="row" style="padding-left:2em">
+            <div class="col">
+              <label for="subject">Subject:</label>
+              <input
+                class="form-control"
+                type="text"
+                name="subject"
+                id="subject"
+              /><br />
+            </div>
+            <div class="col">
+              <label for="topic">Topic:</label>
+              <input
+                class="form-control"
+                type="text"
+                name="topic"
+                id="topic"
+              /><br />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <legend>
+            2. Add an Adventure
+          </legend>
+
+          <div class="row" style="padding-left:2em">
+            <div class="col">
+              <label for="module">Adventure Title:</label>
+              <input
+                type="text"
+                name="module"
+                id="module"
+                class="form-control"
+              /><br />
+            </div>
+
+            <div class="col">
+              <label for="template-option"
+                  >Choose an Adventure Template:</label
+                ><br />
+              <div class="form-check">
+                
+
+                <input
+                  type="radio"
+                  id="escape-room"
+                  name="template-option"
+                  value="escape-room"
+                  class="form-check-input"
+                />
+                <label for="template-option" class="form-check-label"
+                  >Escape the Room</label
+                ><br />
+                <input
+                  type="radio"
+                  id="save-princess"
+                  name="template-option"
+                  value="save-princess"
+                  class="form-check-input"
+                />
+                <label for="template-option" class="form-check-label"
+                  >Save the Princess</label
+                ><br />
+                <input
+                  type="radio"
+                  id="dragon-slayer"
+                  name="template-option"
+                  value="dragon-slayer"
+                  class="form-check-input"
+                />
+                <label for="template-option" class="form-check-label"
+                  >Dragon Slayer</label
+                ><br />
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group" id="lessons">
+          <legend>
+            3. Add Concept(s)
+          </legend>
+<!--           <div class="lesson form-group">
+            <div class="row">
+              <div class="col">
+                <label for="title">Concept Title:</label>
+                <input
+                  type="text"
+                  name="title"
+                  class="title form-control"
+                /><br />
+
+                <label for="content">Concept Content:</label>
+                <textarea
+                  rows="10"
+                  type="text"
+                  name="content"
+                  class="content form-control"
+                ></textarea>
+                <br />
+              </div>
+              <div class="col">
+                <label for="question">Review Question:</label>
+                <textarea
+                  rows="2"
+                  type="text"
+                  name="question"
+                  class="question form-control"
+                ></textarea
+                ><br />
+
+                <p>
+                  Multiple Choice Answers (Please select the correct choice):
+                </p>
+                <label for="choices" class="form-check-label" a>A. </label>
+                <div class="form-inline">
+                  <input
+                    type="radio"
+                    class="form-check-input mcq-radio col-1"
+                    name="choices"
+                    value="a"
+                  />
+                  <input
+                    type="text"
+                    name="choices-input"
+                    class="form-control col"
+                  />
+                </div>
+                
+                <label for="choices" class="form-check-label" a>B. </label>
+                <div class="form-inline">
+                  <input
+                    type="radio"
+                    class="form-check-input mcq-radio col-1"
+                    name="choices"
+                    value="b"
+                  />
+                  <input
+                    type="text"
+                    name="choices-input"
+                    class="form-control col"
+                  />
+                </div>
+                
+                <label for="choices" class="form-check-label" a>C. </label>
+                <div class="form-inline">
+                  <input
+                    type="radio"
+                    class="form-check-input mcq-radio col-1"
+                    name="choices"
+                    value="c"
+                  />
+                  <input
+                    type="text"
+                    name="choices-input"
+                    class="form-control col"
+                  />
+                </div>
+                
+                <label for="choices" class="form-check-label" a>D. </label>
+                <div class="form-inline">
+                  <input
+                    type="radio"
+                    class="form-check-input mcq-radio col-1"
+                    name="choices"
+                    value="d"
+                  />
+                  <input
+                    type="text"
+                    name="choices-input"
+                    class="form-control col"
+                  />
+                </div>
+                
+              </div>
+            </div>
+          </div> -->
+        </div>
+
+        <button
+          id="new-lesson"
+          name="new-lesson"
+          type="button"
+          class="btn btn-info"
+          style = "background-color: #242254; border-color: #242254"
+          onclick=""
+        >
+          Add Another Concept
+        </button>
+        <br />
+        <br />
+
+        <div class="row d-flex justify-content-center">
+          <button id="submit" class="btn btn-lg btn-primary col-2" type="button" onclick="" style = "background-color: #D32F2F; border-color: #D32F2F">
+          Submit</button
+        ><br />
+        </div>
+        
+      </form>
+    </div>
+    
+    <div class="footer">
+      <p>Because Education is a Right <br>- Nitaq 2020 - </p>
+    </div>
+
+    <script>
+      // TODO: Replace the following with your app's Firebase project configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyDbZobYRHyd0sU3l_6vG2vajtotbZpHM6w",
+        authDomain: "nitaq-7de81.firebaseapp.com",
+        databaseURL: "https://nitaq-7de81.firebaseio.com",
+        projectId: "nitaq-7de81",
+        storageBucket: "nitaq-7de81.appspot.com",
+        messagingSenderId: "838461415327",
+        appId: "1:838461415327:web:1bc27daaca53e188eaa7aa",
+        measurementId: "G-FXMQ46VF7Q"
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      db = firebase.firestore();
+    </script>
+    <script src="/create/script.js" defer></script>
+  </body>
+</html>

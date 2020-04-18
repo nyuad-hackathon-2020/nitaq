@@ -1,0 +1,54 @@
+.navbar-nav > li{
+  padding-left:10px;
+  padding-right:10px;
+}
+
+body {
+/*   background: linear-gradient(to right, rgba(58,123,213,0.6) 0%, rgba(255,255,255,0.4) 51%, rgba(58,123,213,0.6) 100%); */
+  font-family: "Open Sans";
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+legend{
+  font-weight: bold;
+}
+
+
+
+.footer {
+/*   position: fixed; */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #242254;
+  color: white;
+  text-align: center;
+}
+
+.footer p {
+  margin-top: 50px;
+  margin-bottom: -20px;
+  font-size: 20px;
+  vertical-align: middle;
+  padding: 10px;
+  font-family: "Advent Pro";
+}
