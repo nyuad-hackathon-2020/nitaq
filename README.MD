@@ -1,2 +1,2 @@
 # Nitaq
-Nitaq is the low-connectivity solution for both educators and students. It provides teachers with a seamless platform to transform their lesson plan into an engaging, gamified educational experience for their students who lack access to high-speed Internet.
+Nitaq, which means scope in Arabic, is a seamless platform for educators to transform their lesson plan into an engaging, gamified low-connectivity educational experience for their students.
