@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/allCourses"
+        android:icon="@drawable/grad"
+        android:title="All Courses"/>
+
+
+    <item
+        android:id="@+id/contactsBtn"
+        android:icon="@drawable/mesh2"
+        android:title="My Network"/>
+
+
+    <item
+        android:id="@+id/coursesBtn"
+        android:icon="@drawable/download_24"
+        android:title="Downloads"/>
+</menu>

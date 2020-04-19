@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="2dp"
+        >
+
+        <!--
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_avatar"
+            android:id="@+id/avatar"/>
+
+            -->
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/hype_announcement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="Announcement: ---"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/hype_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:paddingLeft="20dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="0dp"
+                android:text="TextView"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/hype_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:paddingLeft="20dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="8dp"
+                android:text="Name"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textColor="@color/bluishGray"
+                android:textSize="12sp" />
+
+        </TableLayout>
+
+        <!--
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="20dip"
+            android:src="@mipmap/ic_newcontent"
+            android:id="@+id/new_content"
+            android:layout_weight="0.1"/>
+
+            -->
+
+    </TableRow>
+
+</TableLayout>
